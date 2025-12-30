@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Sacha Ruffino - Concepteur Mécanique alternant chez ArianeGroup. Spécialisé en CAO, FEM et justifications thermomécaniques.">
+    <meta name="keywords" content="ingénieur mécanique, CAO, CATIA, ArianeGroup, conception mécanique">
+    <meta name="author" content="Sacha Ruffino">
+    
+    <title>Sacha RUFFINO | Concepteur Mécanique - ArianeGroup</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#home">Sacha Ruffino</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Accueil</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#experience" class="nav-link">Parcours</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Bandeau Logos Partenaires -->
+    <div class="partners-banner-new">
+        <div class="banner-container">
+            <div class="logo-item">
+                <img src="images/logos/arianegroup-logo.png" alt="ArianeGroup">
+            </div>
+            <div class="logo-separator"></div>
+            <div class="logo-item">
+                <img src="images/logos/uvsq-logo.png" alt="UVSQ IUT de Mantes">
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <span class="hero-greeting">Bonjour, je suis</span>
+                <h1 class="hero-name">Sacha RUFFINO</h1>
+                <p class="hero-title">Concepteur Mécanique</p>
+                <p class="hero-subtitle">Alternant ArianeGroup | Spécialiste CAO & Prédimensionnement de Structures</p>
+                
+                <!-- Paragraphe de présentation enrichi -->
+                <div class="hero-description">
+                    <p>
+                        <strong>Passionné par l'aéronautique et le spatial</strong>, je réalise mon alternance au sein du bureau 
+                        d'intégration moteur des lanceurs <strong>ArianeGroup</strong>. Spécialisé en conception mécanique, 
+                        je réalise une partie de la chaîne de développement : de la modélisation 3D aux calculs FEM, 
+                        en passant par l'optimisation topologique et la cotation fonctionnelle ISO.
+                    </p>
+                    <p class="hero-highlight">
+                        <i class="fas fa-rocket"></i> Actuellement en BUT Génie Mécanique et Productique à l'IUT de Mantes-en-Yvelines, 
+                        je combine rigueur académique et expérience industrielle pour concevoir des solutions techniques innovantes 
+                        et optimisées.
+                    </p>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Ans d'expérience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Logiciels CAO maîtrisés</span>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    <a href="assets/CV_Sacha_Ruffino.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Télécharger CV
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="mailto:sacha.ruffino@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+33695289575" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/sacha-ruffino-b6a12b211/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sacha-ruffino" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="hero-media-container">
+                    <!-- Photo de profil -->
+                    <div class="profile-image-wrapper">
+                        <img src="images/profile.jpg" alt="Sacha Ruffino - Photo de profil" class="profile-image">
+                    </div>
+                    <!-- Vidéo A6 Lift Off -->
+                    <div class="hero-video-wrapper">
+                        <video class="hero-video" autoplay muted loop playsinline webkit-playsinline>
+                            <source src="videos/A6-lift-off.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Réalisations</span>
+                <h2 class="section-title">Projets techniques</h2>
+            </div>
+
+            <div class="projects-grid-compact">
+                <!-- Project 1: GOUPIL 4000 -->
+                <div class="project-card-compact project-card-media">
+                    <div class="project-media-grid project-media-goupil">
+                        <!-- Image 1: Vue CNC -->
+                        <div class="media-item">
+                            <img src="images/projects/goupil4000/goupil-4000-vue2.png" alt="GOUPIL 4000 - CNC" loading="lazy">
+                            <div class="project-badge">Projet phare</div>
+                        </div>
+                        <!-- Image 2: Interface G-code -->
+                        <div class="media-item">
+                            <img src="images/projects/goupil4000/interface-gcode-2.png" alt="GOUPIL 4000 - Interface G-code" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="project-content-compact">
+                        <h3>GOUPIL 4000 - CNC Avancée</h3>
+                        <p class="project-desc-compact">
+                            🔧 Broche haute performance : Conçue sur mesure<br>
+                            💻 Logiciel de pilotage : Software dédié<br>
+                            📈 Rigidité : Structure 10× plus rigide que la précédente itération<br>
+                            🎯 Objectif : 5/100<sup>e</sup> de précision, usinage de l'acier
+                        </p>
+                        <div class="project-buttons">
+                            <a href="page-a-venir.html" class="btn-project-link">
+                                <i class="fas fa-arrow-right"></i> Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Robot Marcheur Fourcade -->
+                <div class="project-card-compact project-card-media">
+                    <div class="project-media-grid">
+                        <!-- Image -->
+                        <div class="media-item">
+                            <img src="images/projects/robot-marcheur/fourcade-iso-reel.jpg" alt="Robot Marcheur Fourcade" loading="lazy">
+                            <div class="project-badge">Concours</div>
+                        </div>
+                        <!-- Vidéo -->
+                        <div class="media-item">
+                            <video controls autoplay loop muted playsinline webkit-playsinline class="project-video" preload="auto">
+                                <source src="videos/fourcade-marche.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="project-content-compact">
+                        <h3>Robot Marcheur Fourcade</h3>
+                        <p class="project-desc-compact">
+                            🔧 Locomotion mécanique + tir directionnel<br>
+                            🎮 Pilotage RC via Arduino<br>
+                            🏆 Projet d'équipe primé au concours IUT GMP !
+                        </p>
+                        <div class="project-buttons">
+                            <a href="page-a-venir.html" class="btn-project-link">
+                                <i class="fas fa-arrow-right"></i> Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: GOUPIL 3000 -->
+                <div class="project-card-compact project-card-media">
+                    <div class="project-media-grid">
+                        <!-- Image -->
+                        <div class="media-item">
+                            <img src="images/projects/goupil4000/goupil-4000-photo2.jpg" alt="GOUPIL 3000" loading="lazy">
+                            <div class="project-badge completed">Terminé</div>
+                        </div>
+                        <!-- Vidéo -->
+                        <div class="media-item">
+                            <video controls autoplay loop muted playsinline webkit-playsinline class="project-video" preload="auto">
+                                <source src="videos/g3000-usinage.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="project-content-compact">
+                        <h3>GOUPIL 3000</h3>
+                        <p class="project-desc-compact">
+                            🔍 Validation des calculs : permet de valider le cas de charges (usinage du bois).<br>
+                            ⚡ Itération rapide : Cette version sert de prototype avant la V4.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Machine Garnissage -->
+                <div class="project-card-compact project-card-media">
+                    <div class="project-media-grid">
+                        <!-- Image -->
+                        <div class="media-item">
+                            <img src="images/projects/machine-garnissage/machine-vue-ensemble.jpg" alt="Machine de Garnissage Automatisée" loading="lazy">
+                            <div class="project-badge">Innovation</div>
+                        </div>
+                        <!-- Vidéo -->
+                        <div class="media-item">
+                            <video controls autoplay loop muted playsinline webkit-playsinline class="project-video" preload="auto">
+                                <source src="videos/machine-garnissage-detection.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="project-content-compact">
+                        <h3>Machine Spéciale (Pâtisserie)</h3>
+                        <p class="project-desc-compact">
+                            👁 Vision par algorithme open source : Reconnaissance vidéo (OpenCV) pour un positionnement ultra-précis.<br>
+                            ⚙ Pilotage 4 axes : CNC sur mesure pour un garnissage uniforme et reproductible.<br>
+                            💻 Logiciel dédié : Développement d'une interface intuitive pour un réglage rapide en labo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Formation & Expérience Section (Combined) -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Parcours</span>
+                <h2 class="section-title">Formation & Expérience</h2>
+            </div>
+            <div class="formation-experience-grid">
+                <!-- Formation Column (Left) -->
+                <div class="formation-column">
+                    <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Formation</h3>
+                    <div class="timeline-compact">
+                        <div class="timeline-item-compact">
+                            <span class="timeline-date-compact">2023 - 2026</span>
+                            <h4>BUT Génie Mécanique et Productique</h4>
+                            <p class="timeline-subtitle">IUT de Mantes en Yvelines</p>
+                            <p class="timeline-description-compact">Formation en alternance axée sur la conception mécanique, la productique et les méthodes industrielles.</p>
+                            <ul class="timeline-list-compact">
+                                <li>CAO avancée (CATIA V5, 3DEXPERIENCE)</li>
+                                <li>Calculs de structures (RDM, FEM)</li>
+                                <li>Méthodes et productique</li>
+                                <li>Gestion de projet</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item-compact">
+                            <span class="timeline-date-compact">2021 - 2023</span>
+                            <h4>Baccalauréat Général</h4>
+                            <p class="timeline-subtitle">Lycée Charles de Gaulle, Poissy</p>
+                            <p class="timeline-description-compact">Spécialités Mathématiques et Physique-Chimie - Mention obtenue</p>
+                        </div>
+                        <div class="timeline-item-compact">
+                            <span class="timeline-date-compact">2020 - 2021</span>
+                            <h4>Seconde Générale</h4>
+                            <p class="timeline-subtitle">Lycée Le Corbusier, Poissy</p>
+                            <p class="timeline-description-compact">Formation générale en classe de seconde</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expérience Column (Right) -->
+                <div class="experience-column">
+                    <h3 class="column-title"><i class="fas fa-briefcase"></i> Expérience</h3>
+                    <div class="timeline-compact">
+                        <div class="timeline-item-compact">
+                            <span class="timeline-date-compact">2024 - Aujourd'hui</span>
+                            <h4>Concepteur Mécanique (Alternance)</h4>
+                            <p class="timeline-subtitle"><i class="fas fa-building"></i> ArianeGroup Vernon</p>
+                            <p class="timeline-description-compact">Conception et justification de composants d'intégration pour moteurs fusée cryogéniques.</p>
+                            <ul class="timeline-list-compact">
+                                <li><strong>Réduction de coût</strong> sur Prometheus® et Vulcain 2.1® (ROI sur composants A6)</li>
+                                <li>Justifications thermomécaniques sur liaisons cryogéniques</li>
+                                <li>Calculs FEM et optimisation de supportage</li>
+                                <li>Chaînes de cotes fonctionnelles</li>
+                            </ul>
+                            <div class="tech-tags-compact">
+                                <span class="tech-tag-compact">CATIA V5</span>
+                                <span class="tech-tag-compact">3DEXPERIENCE</span>
+                                <span class="tech-tag-compact">SAP</span>
+                            </div>
+                        </div>
+                        <div class="timeline-item-compact">
+                            <span class="timeline-date-compact">2020 - Aujourd'hui</span>
+                            <h4>Vendeur & Concepteur (Projet personnel)</h4>
+                            <p class="timeline-subtitle"><i class="fas fa-store"></i> Natacha Délices</p>
+                            <p class="timeline-description-compact">Vente de macarons artisanaux. Conception d'une machine de garnissage automatisée.</p>
+                            <ul class="timeline-list-compact">
+                                <li>Reconnaissance d'imagerie (OpenCV)</li>
+                                <li>Pilotage 4 axes CNC automatisé</li>
+                            </ul>
+                            <div class="tech-tags-compact">
+                                <span class="tech-tag-compact">OpenCV</span>
+                                <span class="tech-tag-compact">Arduino</span>
+                                <span class="tech-tag-compact">CNC 4 axes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Clés Section (Enriched with Media) -->
+    <section id="skills" class="section skills-quick">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">Compétences Clés</h2>
+            </div>
+            
+            <div class="skills-grid-simple">
+                <!-- Skill 1: CAO 3D avec vidéo -->
+                <div class="skill-card-simple skill-card-media">
+                    <div class="skill-icon-large">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>CAO</h3>
+                    <p>CATIA V5 • 3DEXPERIENCE • SolidWorks</p>
+                    <div class="skill-media">
+                        <video controls loop muted autoplay playsinline webkit-playsinline class="skill-video" preload="auto">
+                            <source src="videos/fourcade-3d.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <p class="skill-description">Au sein d'ArianeGroup et lors de projets universitaires et personnels, j'ai approfondi ma maîtrise des logiciels de CAO : modélisation surfacique et volumique, assemblages et liaisons cinématiques, simulations dynamiques.</p>
+                </div>
+                
+                <!-- Skill 2: Calculs FEM avec vidéo et image -->
+                <div class="skill-card-simple skill-card-media">
+                    <div class="skill-icon-large">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculs & FEM</h3>
+                    <p>Abaqus • CATIA GPS • RDM • Thermo-mécanique (basique)</p>
+                    <div class="skill-media">
+                        <video controls autoplay loop muted playsinline webkit-playsinline class="skill-video" preload="auto">
+                            <source src="videos/arboutement-g4000-iso.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <p class="skill-description">J'ai eu l'occasion en entreprise de réaliser des modèles de calcul sur CATIA GPS pour des analyses statiques et dynamiques, incluant la modélisation fine des liaisons entre pièces. Cette expertise a été appliquée par la suite sur le projet GOUPIL 4000.</p>
+                </div>
+                
+                <!-- Skill 3: Mise en plan & Cotation -->
+                <div class="skill-card-simple skill-card-media">
+                    <div class="skill-icon-large">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <h3>Mise en plan & Cotation fonctionnelle</h3>
+                    <p>Plans ISO • Chaînes de cotes • Tolérancement</p>
+                    <div class="skill-media-grid-plans">
+                        <img src="images/competences/plaque-liaison-motorisee.png" alt="Plan technique - Plaque liaison motorisée G-4000" loading="lazy" class="skill-plan-image">
+                        <img src="images/competences/eclate-porfique-g4000.png" alt="Plan technique - Éclaté porfique G-4000" loading="lazy" class="skill-plan-image">
+                    </div>
+                    <p class="skill-description">Formation IUT aux normes de cotation ISO récentes, permettant la réalisation de plans techniques rigoureux et conformes aux standards industriels.</p>
+                </div>
+                
+                <!-- Skill 4: Méthodes & FAO -->
+                <div class="skill-card-simple skill-card-media">
+                    <div class="skill-icon-large">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Méthodes & FAO</h3>
+                    <p>Fabrication assistée • Gammes • Optimisation</p>
+                    <div class="skill-media-complex">
+                        <!-- 2 vidéos empilées -->
+                        <div class="skill-media-row-2">
+                            <video controls loop muted autoplay playsinline webkit-playsinline class="skill-video-small" preload="auto">
+                                <source src="videos/usinage-3x-reel-new.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo.
+                            </video>
+                            <video controls loop muted autoplay playsinline webkit-playsinline class="skill-video-small" preload="auto">
+                                <source src="videos/usinage-3x.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la vidéo.
+                            </video>
+                        </div>
+                    </div>
+                    <p class="skill-description">TP de FAO et de production à l'IUT, réutilisés sur les projets personnels. Cette approche permet de concevoir en connaissance des moyens de production, un atout majeur pour les bureaux d'études.</p>
+                </div>
+            </div>
+            
+            <!-- 3ème ligne commune : Image pièce usinée (pleine largeur) -->
+            <div class="skill-shared-row">
+                <div class="skill-shared-content">
+                    <div class="skill-media-row-shared">
+                        <div class="skill-badge-piece">Pièce finie</div>
+                        <img src="https://www.genspark.ai/api/files/s/9OEQSmyF" alt="Pièce usinée 3 axes - Résultat final" loading="lazy" class="skill-image-shared">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Qualifications officielles</span>
+                <h2 class="section-title">Certifications</h2>
+            </div>
+            <div class="certifications-grid">
+                <!-- Certification 1 : TOEIC -->
+                <div class="certification-card">
+                    <div class="certification-icon certification-badge-image">
+                        <img src="images/certifications/toeic-logo.png" alt="TOEIC" loading="lazy">
+                    </div>
+                    <h4>TOEIC</h4>
+                    <p class="cert-status">En cours - Passage prévu 2026</p>
+                    <p class="cert-description">Test d'anglais professionnel pour valider le niveau B2</p>
+                </div>
+                
+                <!-- Certification 2 : 3DEXPERIENCE Mechanical Designer -->
+                <div class="certification-card">
+                    <div class="certification-icon certification-badge-image">
+                        <img src="images/certifications/dassault-3dexperience-badge.png" alt="CATIA Associate - Mechanical Designer" loading="lazy">
+                    </div>
+                    <h4>CATIA Associate</h4>
+                    <p class="cert-status">Acquis - 2025</p>
+                    <p class="cert-description">Mechanical Designer<br>Certification officielle Dassault Systèmes</p>
+                </div>
+                
+                <!-- Certification 3 : Structural Engineering Associate -->
+                <div class="certification-card">
+                    <div class="certification-icon certification-badge-image">
+                        <img src="images/certifications/dassault-structural-engineer-badge.png" alt="SIMULIA Associate - Structural Engineer" loading="lazy">
+                    </div>
+                    <h4>SIMULIA Associate</h4>
+                    <p class="cert-status">En cours - Passage prévu 2026</p>
+                    <p class="cert-description">Structural Engineer<br>Certification calculs structure Dassault Systèmes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations Continues Section -->
+    <section id="formations" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Développement des compétences</span>
+                <h2 class="section-title">Formations Continues</h2>
+            </div>
+            <div class="certifications-grid">
+                <!-- Formation 1 : CATIA V5 -->
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h4>CATIA V5</h4>
+                    <p class="cert-status">Acquis en entreprise - 2024-2026</p>
+                    <p class="cert-description">Maîtrise en conception et assemblages complexes</p>
+                </div>
+                
+                <!-- Formation 2 : Concours Robot -->
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Concours National Inter-IUT</h4>
+                    <p class="cert-status">Participation - 2025</p>
+                    <p class="cert-description">Robot Marcheur<br>Concours national robotique GMP</p>
+                </div>
+                
+                <!-- Formation 3 : SAP & Teamcenter -->
+                <div class="certification-card">
+                    <div class="certification-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4>SAP & Teamcenter (PLM)</h4>
+                    <p class="cert-status">Acquis - 2024-2026</p>
+                    <p class="cert-description">Gestion des processus industriels et PLM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Restons en contact</span>
+                <h2 class="section-title">Me contacter</h2>
+                <p class="section-subtitle">
+                    Intéressé par mon profil ? N'hésitez pas à me contacter pour échanger sur 
+                    des opportunités professionnelles, des projets ou simplement pour discuter.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:sacha.ruffino@gmail.com">sacha.ruffino@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Téléphone</h4>
+                                <a href="tel:+33695289575">+33 6 95 28 95 75</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Localisation</h4>
+                                <p>2 Clos des sources<br>78510 Triel-sur-Seine, France</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Mobilité</h4>
+                                <p>Véhiculé - Permis B</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>Réseaux sociaux</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/sacha-ruffino" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/sacha-ruffino" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-cv">
+                        <a href="assets/CV_Sacha_Ruffino.pdf" class="btn btn-primary btn-large" download>
+                            <i class="fas fa-download"></i> Télécharger mon CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <h3>Envoyez-moi un message</h3>
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Sacha RUFFINO</h3>
+                    <p>Concepteur Mécanique passionné par l'innovation et les technologies aérospatiales.</p>
+                    <div class="footer-social">
+                        <a href="mailto:sacha.ruffino@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+33695289575" aria-label="Téléphone"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/in/sacha-ruffino-b6a12b211/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sacha-ruffino" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#experience">Expérience</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact rapide</h4>
+                    <p><i class="fas fa-envelope"></i> sacha.ruffino@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +33 6 95 28 95 75</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Triel-sur-Seine, France</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sacha RUFFINO. Tous droits réservés.</p>
+                <p class="footer-tech">Conçu avec <i class="fas fa-heart"></i> | Hébergé sur GitHub Pages</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Lightbox Modal for Image Gallery -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Précédent">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Suivant">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="Image en plein écran" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- Configuration des galeries (modifier ce fichier pour changer les images) -->
+    <script src="js/gallery-config.js"></script>
+    <!-- Script principal -->
+    <script src="js/main.js"></script>
+</body>
+</html>
