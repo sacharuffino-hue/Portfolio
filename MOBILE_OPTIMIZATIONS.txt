@@ -1,0 +1,56 @@
+✅ OPTIMISATIONS MOBILE APPLIQUÉES - Portfolio Sacha Ruffino
+
+═══════════════════════════════════════════════════════════
+📱 SECTION HERO - VERSION MOBILE OPTIMISÉE
+═══════════════════════════════════════════════════════════
+
+1. STATS (2+, 4+, 3+)
+   ✅ Affichage en LIGNE (3 colonnes) sur mobile
+   ✅ Taille réduite : nombres 1.5rem, labels 0.65rem
+   ✅ Gap minimal pour tenir sur une ligne
+   ✅ Espacement optimisé
+
+2. BOUTONS CTA
+   ✅ 2 boutons côte à côte au lieu de 3 en colonne
+   ✅ "Voir mes projets" MASQUÉ sur mobile
+   ✅ "Me contacter" + "Télécharger CV" visibles en ligne
+   ✅ Padding réduit : 0.6rem 0.8rem
+   ✅ Font-size réduit : 0.85rem
+
+3. ICÔNES SOCIALES (Email, Téléphone, LinkedIn, GitHub)
+   ✅ MASQUÉES sur mobile (redondant avec bouton contact)
+
+4. PHOTO + VIDÉO
+   ✅ Toujours en 2 colonnes côte à côte
+   ✅ Dimensions : 48% largeur, max 160px × 285px
+   ✅ Gap réduit : 0.5rem
+
+═══════════════════════════════════════════════════════════
+🎯 RÉSULTAT
+═══════════════════════════════════════════════════════════
+
+AVANT (mobile) :
+- Stats en colonne (prenait beaucoup de hauteur)
+- 3 boutons en colonne (prenait beaucoup de hauteur)
+- Icônes sociales visibles (redondant)
+- Projets visibles seulement après scroll
+
+APRÈS (mobile) :
+✅ Stats sur 1 ligne (gain de hauteur)
+✅ 2 boutons compacts sur 1 ligne (gain de hauteur)
+✅ Pas d'icônes sociales redondantes
+✅ Photo + vidéo toujours visibles côte à côte
+✅ PROJETS VISIBLES DÈS L'OUVERTURE (sans scroll)
+
+═══════════════════════════════════════════════════════════
+📐 BREAKPOINTS MOBILE
+═══════════════════════════════════════════════════════════
+
+< 360px : Stats/Boutons ultra-compacts
+360-480px : Configuration optimale décrite ci-dessus
+481-768px : Légèrement plus d'espace
+
+═══════════════════════════════════════════════════════════
+
+Date : 2026-01-01
+Version : Mobile Optimized v1.0

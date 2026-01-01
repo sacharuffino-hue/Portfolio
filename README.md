@@ -63,12 +63,33 @@ portfolio/
 
 ## 📱 Fonctionnalités
 
-- ✅ Design responsive (mobile, tablette, desktop)
+- ✅ Design 100% responsive (mobile, tablette, desktop)
+- ✅ Menu hamburger pour mobile
 - ✅ Galeries photos interactives
-- ✅ Vidéos de démonstration intégrées
-- ✅ Navigation fluide
+- ✅ Vidéos de démonstration intégrées (autoplay)
+- ✅ Photo de profil + vidéo Ariane 6 en format 16:9 vertical
+- ✅ Navigation fluide et smooth scroll
 - ✅ CV téléchargeable
-- ✅ Formulaire de contact
+- ✅ Animations et transitions fluides
+- ✅ Optimisé pour écrans tactiles
+- ✅ Adapté aux orientations portrait et paysage
+
+## 📐 Breakpoints responsive
+
+Le site s'adapte automatiquement à tous les écrans :
+
+- **Mobile portrait** : < 480px
+- **Mobile paysage** : 481px - 768px
+- **Tablette portrait** : 481px - 768px
+- **Tablette paysage** : 769px - 1024px
+- **Desktop** : > 1024px
+
+### Optimisations mobiles
+- Taille de police adaptative
+- Boutons pleine largeur sur petit écran
+- Menu hamburger avec animation
+- Zones tactiles optimisées (min 44px)
+- Images et vidéos redimensionnées intelligemment
 
 ## 🚀 Déploiement
 
@@ -80,7 +101,7 @@ Ce site est déployé sur **GitHub Pages**.
 
 - **Email :** sacha.ruffino@gmail.com
 - **Téléphone :** +33 6 95 28 95 75
-- **LinkedIn :** [sacha-ruffino](https://www.linkedin.com/in/sacha-ruffino)
+- **LinkedIn :** [sacha-ruffino-b6a12b211](https://www.linkedin.com/in/sacha-ruffino-b6a12b211/)
 - **GitHub :** [sacha-ruffino](https://github.com/sacha-ruffino)
 
 ## 📄 Licence

@@ -239,6 +239,7 @@ a:hover {
 @media (max-width: 768px) {
     .nav-toggle {
         display: flex;
+        z-index: calc(var(--z-fixed) + 1);
     }
     
     .nav-menu {
@@ -254,12 +255,26 @@ a:hover {
         opacity: 0;
         visibility: hidden;
         transition: all var(--transition-base);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        z-index: var(--z-fixed);
     }
     
     .nav-menu.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+    }
+    
+    .nav-link {
+        padding: var(--spacing-md) 0;
+        font-size: 1.1rem;
+        text-align: center;
+        border-bottom: 1px solid var(--border-light);
+    }
+    
+    .nav-link:last-child {
+        border-bottom: none;
     }
 }
 
@@ -732,9 +747,11 @@ a:hover {
     margin: var(--spacing-md) 0;
 }
 
+/* Desktop : stats en ligne, centré pour mobile/tablette sera surchargé plus bas */
 @media (max-width: 768px) {
     .hero-stats {
         justify-content: center;
+        gap: var(--spacing-md);
     }
 }
 
@@ -760,10 +777,12 @@ a:hover {
     margin: var(--spacing-lg) 0;
 }
 
+/* CTA pour tablette/desktop - sera surchargé sur mobile */
 @media (max-width: 768px) {
     .hero-cta {
-        flex-direction: column;
+        flex-direction: row; /* Modifié : en ligne au lieu de colonne */
         align-items: center;
+        justify-content: center;
     }
 }
 
@@ -868,24 +887,46 @@ a:hover {
 
 @media (max-width: 1200px) {
     .hero-media-container {
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction: row; /* Garde en ligne (2 colonnes) */
+        gap: 1rem;
+        justify-content: center;
     }
     
     .profile-image-wrapper,
     .profile-placeholder,
     .hero-video-wrapper {
-        width: 281px;  /* Format 16:9 vertical */
-        height: 500px;
+        width: 240px;  /* Format 16:9 vertical */
+        height: 425px;
     }
 }
 
 @media (max-width: 768px) {
+    .hero-media-container {
+        flex-direction: row; /* Force 2 colonnes sur mobile */
+        gap: 0.75rem;
+    }
+    
     .profile-image-wrapper,
     .profile-placeholder,
     .hero-video-wrapper {
-        width: 225px;  /* Format 16:9 vertical */
-        height: 400px;
+        width: 45%; /* 45% de largeur chacun pour tenir côte à côte */
+        max-width: 180px;
+        height: 320px;  /* Format 16:9 vertical réduit */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-media-container {
+        flex-direction: row; /* Garde 2 colonnes même sur petit mobile */
+        gap: 0.5rem;
+    }
+    
+    .profile-image-wrapper,
+    .profile-placeholder,
+    .hero-video-wrapper {
+        width: 48%; /* 48% chacun pour maximiser l'espace */
+        max-width: 160px;
+        height: 285px;  /* Format 16:9 vertical */
     }
 }
 
@@ -3098,4 +3139,579 @@ a:hover {
     
     .timeline { padding-left: var(--spacing-md); }
     .timeline-marker { left: calc(-1 * var(--spacing-md) - 6px); }
+}
+
+/* ========================================
+   21. AMÉLIORATIONS RESPONSIVE MOBILE
+   ======================================== */
+
+/* Smartphones en portrait (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Typographie mobile */
+    html {
+        font-size: 14px;
+    }
+    
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    
+    /* Container avec moins de padding */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Navigation mobile */
+    .navbar .container {
+        height: 60px;
+    }
+    
+    .nav-brand a {
+        font-size: 1.25rem;
+    }
+    
+    /* Hero section mobile */
+    .hero {
+        padding: var(--spacing-lg) 0;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-greeting {
+        font-size: 0.875rem;
+    }
+    
+    .hero-name {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-title {
+        font-size: 1.1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-description {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-md) 0;
+    }
+    
+    .hero-description p {
+        font-size: 0.875rem;
+        line-height: 1.6;
+    }
+    
+    /* Stats hero EN LIGNE sur mobile (3 colonnes) */
+    .hero-stats {
+        flex-direction: row !important; /* Force en ligne */
+        gap: var(--spacing-xs);
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .stat-item {
+        flex: 1;
+        text-align: center;
+        min-width: 0; /* Permet la compression */
+        padding: 0 0.2rem;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem; /* Réduit pour tenir sur une ligne */
+        display: block;
+        white-space: nowrap;
+    }
+    
+    .stat-label {
+        font-size: 0.65rem; /* Plus petit pour économiser l'espace */
+        line-height: 1.2;
+        white-space: normal; /* Permet le passage à la ligne si nécessaire */
+    }
+    
+    /* Boutons hero COMPACTS - seulement 2 boutons visibles */
+    .hero-cta {
+        flex-direction: row !important; /* En ligne sur mobile */
+        gap: var(--spacing-xs);
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-cta .btn {
+        flex: 1;
+        padding: 0.6rem 0.8rem; /* Plus compact */
+        font-size: 0.85rem;
+        text-align: center;
+        justify-content: center;
+        white-space: nowrap; /* Empêche le texte de passer sur 2 lignes */
+    }
+    
+    /* Masquer le bouton "Voir mes projets" sur mobile */
+    .hero-cta .btn-primary {
+        display: none !important;
+    }
+    
+    /* Icône dans le bouton plus petite */
+    .hero-cta .btn i {
+        font-size: 0.75rem;
+    }
+    
+    /* Social icons MASQUÉS sur mobile */
+    .hero-social {
+        display: none !important;
+    }
+    
+    /* Photo et vidéo hero mobile - EN 2 COLONNES */
+    .hero-media-container {
+        flex-direction: row !important; /* Force 2 colonnes sur mobile */
+        gap: var(--spacing-sm);
+        justify-content: center;
+    }
+    
+    .profile-image-wrapper,
+    .hero-video-wrapper {
+        width: 48%; /* 48% chacun pour 2 colonnes */
+        max-width: 160px;
+        height: 285px; /* Format 16:9 vertical */
+        margin: 0;
+    }
+    
+    /* Sections */
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .section-tag {
+        font-size: 0.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Bandeau logos partenaires mobile */
+    .partners-banner-new {
+        padding: var(--spacing-sm) 0;
+    }
+    
+    .banner-container {
+        gap: var(--spacing-md);
+    }
+    
+    .logo-item img {
+        max-height: 40px;
+    }
+    
+    /* Projets mobile */
+    .projects-grid-compact {
+        gap: var(--spacing-lg);
+    }
+    
+    .project-card-compact {
+        padding: var(--spacing-md);
+    }
+    
+    .project-badge {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* Boutons mobile */
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    /* Compétences mobile */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Timeline mobile */
+    .timeline {
+        padding-left: var(--spacing-md);
+    }
+    
+    .timeline-item {
+        padding-left: var(--spacing-md);
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-content h4 {
+        font-size: 1rem;
+    }
+    
+    /* Certifications mobile */
+    .certification-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .certification-card {
+        padding: var(--spacing-md);
+    }
+    
+    /* Footer mobile */
+    .footer {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+}
+
+/* ========================================
+   22. RESPONSIVE PROJETS - CORRECTION CHEVAUCHEMENTS
+   ======================================== */
+
+/* Tablette et mobile : Projets en liste verticale */
+@media (max-width: 968px) {
+    /* Grille projets passe en 1 colonne */
+    .projects-grid-compact {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+/* Mobile : Ajustements images et vidéos */
+@media (max-width: 768px) {
+    /* Cartes projets */
+    .project-card-compact {
+        overflow: hidden; /* Important pour empêcher le débordement */
+    }
+    
+    /* Grille média - passe en colonne sur mobile */
+    .project-media-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-md) !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+    
+    /* GOUPIL 4000 - passe en colonne sur mobile */
+    .project-media-goupil {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: var(--spacing-md) !important;
+    }
+    
+    .project-media-goupil .media-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-basis: auto !important;
+        flex-grow: 0 !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .project-media-goupil .media-item:nth-child(1),
+    .project-media-goupil .media-item:nth-child(2) {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-basis: auto !important;
+    }
+    
+    .project-media-goupil .media-item:nth-child(1) img,
+    .project-media-goupil .media-item:nth-child(2) img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Items média généraux */
+    .media-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        aspect-ratio: auto !important;
+        overflow: hidden !important;
+    }
+    
+    .media-item:nth-child(1),
+    .media-item:nth-child(2) {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .media-item img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    
+    .media-item:nth-child(1) img {
+        max-width: 100% !important;
+    }
+    
+    .media-item:nth-child(2) img {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+    
+    /* Vidéos projets */
+    .project-video {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+    
+    /* Image unique projet */
+    .project-image-compact {
+        min-height: 200px;
+        max-height: 300px;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .project-image-compact img {
+        object-fit: contain;
+    }
+    
+    /* Annuler TOUS les transformations et décalages sur mobile */
+    .project-card-media .media-item:nth-child(2) {
+        transform: none !important;
+    }
+    
+    /* Content projet */
+    .project-content-compact {
+        padding: var(--spacing-md);
+    }
+    
+    .project-content-compact h3 {
+        min-height: auto;
+        font-size: 1.25rem;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .project-desc-compact {
+        min-height: auto;
+        font-size: 0.9rem;
+        margin-top: var(--spacing-sm);
+    }
+    
+    /* Boutons projet */
+    .project-buttons {
+        margin-top: var(--spacing-md);
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .btn-project-link {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Badge projet repositionné */
+    .project-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+        position: absolute;
+        top: var(--spacing-sm);
+        left: var(--spacing-sm);
+    }
+}
+
+/* Smartphones portrait (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Réduction supplémentaire de la hauteur des images */
+    .media-item img {
+        max-height: 250px !important;
+    }
+    
+    .project-video {
+        max-height: 250px !important;
+    }
+    
+    .project-image-compact {
+        max-height: 250px;
+    }
+    
+    /* Espacement réduit */
+    .projects-grid-compact {
+        gap: var(--spacing-lg);
+    }
+    
+    .project-media-grid,
+    .project-media-goupil {
+        gap: var(--spacing-sm) !important;
+    }
+    
+    .project-content-compact {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .project-content-compact h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-desc-compact {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+/* Très petits écrans (max-width: 360px) */
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .hero-name {
+        font-size: 1.75rem;
+    }
+    
+    /* Photo et vidéo restent en 2 colonnes même sur très petit écran */
+    .hero-media-container {
+        flex-direction: row !important;
+        gap: 0.4rem;
+    }
+    
+    .profile-image-wrapper,
+    .hero-video-wrapper {
+        width: 48%;
+        max-width: 140px;
+        height: 250px; /* Format 16:9 vertical réduit */
+    }
+    
+    .hero-cta .btn {
+        font-size: 0.875rem;
+        padding: 0.625rem 1rem;
+    }
+    
+    /* Images projets encore plus petites */
+    .media-item img {
+        max-height: 200px !important;
+    }
+    
+    .project-video {
+        max-height: 200px !important;
+    }
+}
+
+/* Tablettes en portrait (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .hero-media-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .profile-image-wrapper,
+    .hero-video-wrapper {
+        width: 240px;
+        height: 425px;
+    }
+    
+    .projects-grid-compact {
+        gap: var(--spacing-xl);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablettes en paysage (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+    
+    .hero-media-container {
+        gap: var(--spacing-lg);
+    }
+    
+    .profile-image-wrapper,
+    .hero-video-wrapper {
+        width: 300px;
+        height: 533px;
+    }
+}
+
+/* Orientation paysage sur mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .hero-media-container {
+        flex-direction: row;
+        gap: var(--spacing-md);
+    }
+    
+    .profile-image-wrapper,
+    .hero-video-wrapper {
+        width: 200px;
+        height: 355px;
+    }
+    
+    .hero-description {
+        display: none;
+    }
+}
+
+/* Touch improvements pour tous les appareils tactiles */
+@media (hover: none) and (pointer: coarse) {
+    /* Augmenter les zones de clic pour le tactile */
+    .nav-link {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .btn {
+        min-height: 44px; /* Taille minimale recommandée Apple/Google */
+    }
+    
+    .hero-social a {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    /* Désactiver les effets hover sur tactile */
+    .btn:hover,
+    .nav-link:hover,
+    .hero-social a:hover {
+        transform: none;
+    }
 }
